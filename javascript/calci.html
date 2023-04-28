@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./calci.css">
+
+</head>
+<body>
+    <!-- <div class="calci">
+        <h2 class="box">Screen</h2>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>+</button>
+        <br>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>-</button>
+        <br>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>*</button>
+        <br>
+        <button>/</button>
+        <button>%</button>
+        <button>0</button>
+        <button>=</button>
+    </div> -->
+
+    <div class="calci" >
+        <table border="3px" >
+            <tr>
+                <td colspan="4"><input type="text" id="screen" placeholder="SCREEN"></td>
+            </tr>
+            <tr>
+                <td><button id="ac">AC</button></td>
+                <td><button id="ce">CE</button></td>
+                <td><button class="calc-btn">%</button></td>
+                <td><button class="calc-btn">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="calc-btn">9</button></td>
+                <td><button class="calc-btn">8</button></td>
+                <td><button class="calc-btn">7</button></td>
+                <td><button class="calc-btn">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="calc-btn">6</button></td>
+                <td><button class="calc-btn">5</button></td>
+                <td><button class="calc-btn">4</button></td>
+                <td><button class="calc-btn">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="calc-btn">3</button></td>
+                <td><button class="calc-btn">2</button></td>
+                <td><button class="calc-btn">1</button></td>
+                <td><button class="calc-btn">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="calc-btn">.</button></td>
+                <td><button class="calc-btn">0</button></td>
+                <td><button class="calc-btn">00</button></td>
+                <td><button id="equals">=</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let screenElement=document.getElementById("screen")
+        let calc_btns=document.getElementsByClassName("calc-btn")
+        for(let i=0;i<calc_btns.length;i++){
+            calc_btns[i].addEventListener("click",function(){
+                screenElement.value+=calc_btns[i].innerText
+            })
+        }
+        let equals=document.getElementById("equals")
+        equals.addEventListener("click", ()=>{
+            screenElement.value=eval(screenElement.value)
+        })
+        let acbtn=document.getElementById("ac")
+        acbtn.addEventListener("click",()=>{
+            screenElement.value=""
+        })
+        let cebtn=document.getElementById("ce")
+        cebtn.addEventListener("click",()=>{
+            screenElement.value=screenElement.value.slice(0,-1)
+        })
+    </script>
+</body>
+</html>

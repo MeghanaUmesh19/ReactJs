@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shape{
+            color: rgb(65, 68, 240);
+            display: flex;
+            justify-content: center;
+        }
+        .div{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .sq{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+        }
+        .rec{
+            height: 100px;
+            width: 200px;
+            border: 2px solid black;
+        }
+        .cir{
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            border-radius:150px ;
+        }
+        .ell{
+            height: 100px;
+            width: 150px;
+            border: 2px solid black;
+            border-radius:50% ;
+        }
+        .tri-up{
+            height: 0px;
+            width: 0px;
+            border-bottom: 100px solid orange;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+        }
+        .tri-down{
+            height: 0px;
+            width: 0px;
+            border-top: 100px solid blue;
+            border-bottom: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+        }
+        .tri-left{
+            height: 0px;
+            width: 0px;
+            border-top: 100px solid transparent;
+            border-bottom: 100px solid transparent;
+            border-left: 100px solid transparent;
+            border-right: 100px solid red;
+        }
+        .tri-right{
+            height: 0px;
+            width: 0px;
+            border-top: 100px solid transparent;
+            border-bottom: 100px solid transparent;
+            border-left: 100px solid darkgoldenrod;
+            border-right: 100px solid transparent;
+        }
+        .tri{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .par{
+            height: 100px;
+            width: 200px;
+            transform: skew(-30deg);
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="shape">SHAPES</h1>
+    <div class="div">
+        <h4 class="sq"></h4>
+        <h4 class="rec"></h4>
+        <h4 class="cir"></h4>
+        <h4 class="ell"></h4>
+    </div>
+    <div class="tri">
+        <h1 class="tri-up"></h1>
+        <h1 class="tri-down"></h1>
+        <h1 class="tri-left"></h1>
+        <h1 class="tri-right"></h1>
+        <h1 class="par"></h1>
+    </div>
+</body>
+</html>

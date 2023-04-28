@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:mediumslateblue;
+        }
+        form{
+            background-color:black;
+            width: 300px;
+            height: 250px;
+            color: white;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 10px white;
+        }
+        input,button{
+            display: block;
+            margin: auto;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .msg{
+            color: red;
+            font-weight: bold;
+            display: none;
+        }
+        #eyes{
+            position: absolute;
+            top: 2px;
+            right: 70px;
+            border: none;
+            background-color: white;
+            height: 15px;
+            width: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return validation(event)">
+        <div>
+            <input type="tel" placeholder="Enter mobile number" name="mobile" id="">
+            <small class="msg">mobile number is invalid,please enter the valid number</small>
+        </div>
+        <br>
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+        let regEx = /(^[6-9][0-9]{9})+$/
+        let errmessage = document.querySelector(".msg")
+        let validation=(e)=>{
+            let inputValue=e.target.mobile.value;
+            if(regEx.test(inputValue)){
+                return true
+            }
+            else{
+                errmessage.style.display="block"
+                return false
+            }
+            
+        }
+        e.preventDefault()
+    </script>
+</body>
+</html>

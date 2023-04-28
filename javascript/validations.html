@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        body{
+            background-color:mediumslateblue;
+        }
+        form{
+            background-color:black;
+            width: 300px;
+            height: 250px;
+            color: white;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: inset 2px 2px 10px white;
+        }
+        input,button{
+            display: block;
+            margin: auto;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .msg{
+            color: red;
+            font-weight: bold;
+            display: none;
+        }
+        #eyes{
+            position: absolute;
+            top: 2px;
+            right: 70px;
+            border: none;
+            background-color: white;
+            height: 15px;
+            width: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return validation(event)">
+        <div>
+            <input type="text" placeholder="Enter username" name="user" id="">
+            <small class="msg">username required</small>
+        </div>
+        <br>
+        <div style="position: relative;">
+            <input type="password" placeholder="Enter password" name="pwd" id="pw">
+            <small class="msg">password required</small>
+            <button onclick="eye()" type="button" id="eyes"><i style="color: black;" class="fa-solid fa-eye"></i></button>
+        </div>
+        <br>
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+        let errmsgs = document.getElementsByClassName("msg")
+        let validation = (e)=>{
+            let username = e.target.user.value
+            let password = e.target.pwd.value
+            if(username==="")
+            {
+                errmsgs[0].style.display="block"
+                return false
+            }
+            else if(password==="")
+            {
+                errmsgs[1].style.display="block"
+                return false
+            }
+        }
+
+        let inputpassword = document.getElementById("pw")
+        let eyeElement = document.getElementById("eyes")
+        function eye()
+        {
+            if(inputpassword.type === "password")
+            {
+                inputpassword.type="text"
+                eyeElement.innerHTML= '<i class="fa-solid fa-eye-slash"></i>'
+            }
+            else
+            {
+                inputpassword.type="password"
+                eyeElement.innerHTML='<i class="fa-solid fa-eye"></i>'
+            }
+        }
+    </script>
+</body>
+</html>

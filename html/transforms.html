@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .container{
+           background-color:rgb(128, 126, 0);
+           height: 100vh;
+           width: 100vw;
+           display: flex;
+           justify-content: center;
+        }
+        .box{
+            background-color: sandybrown;
+            height: 200px;
+            width: 200px;
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            transition: all 2s;
+            box-shadow: inset 0px 0px 20px;
+        }
+        .box:hover{
+            transform: translate(100px) rotate(360deg) scale(1.1); 
+            background-color: rgb(93, 19, 128);
+            /* transform: scale(1.8);
+            transform: translateY(100px);
+            transform: rotate(75deg); */
+        }
+        .h{
+            color: aliceblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1 class="h">Square</h1>
+        </div>
+    </div>
+</body>
+</html>

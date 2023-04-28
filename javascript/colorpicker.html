@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+            height: 100vh;
+            text-align: center;
+        }
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>color picker</h1>
+    <button id="btn">new color</button>
+    <p>color code is <span id="code-display"></span></p>
+
+    <script>
+        let codedisplay=document.getElementById("code-display")
+        let bodyElement=document.querySelector("body")
+        let btnElement=document.getElementById("btn")
+        btnElement.addEventListener("click",()=>{
+            let color="#"
+            let colorchars="0123456789abcdef"
+            for(let i=0;i<6;i++)
+            {
+                let randomnumber=Math.trunc(Math.random()*16)
+                color+=colorchars[randomnumber]
+                bodyElement.style.backgroundColor=color
+                codedisplay.innerText=color
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="posNegZer()">Positive/Negative</button><br><br>
+    <button onclick="evenOdd()">Even/odd</button><br><br>
+    <button onclick="prime()">Prime</button><br><br>
+    <button onclick="factorial()">Factorial</button><br><br>
+    <button onclick="factors()">Factor</button><br><br>
+    <button onclick="swapping()">Swapping</button><br><br>
+    <button onclick="Sum()">Sum in Range</button><br><br>
+    <button onclick="SumEven()">Sum of even in Range</button><br><br>
+    <button onclick="palindrome()">Palindrome</button><br><br>
+    <button onclick="revStr()">Reversing a String</button><br><br>
+    <button onclick="palindromeStr()">Palindrome String</button><br><br>
+
+    <script>
+        function posNegZer(){
+            let num = Number(prompt("Enter a number"))
+            if(num>0)
+            {
+                console.log(`${num} is positive`)
+            }
+            else if(num<0)
+            {
+                console.log(`${num} is negative`)
+            }
+            else
+            {
+                console.log(`number is neither positive nor negative`)
+            }
+        }
+
+        function evenOdd(){
+            let num = Number(prompt("Enter a number"))
+            if(num%2===0)
+            {
+                console.log(`${num} is even`)
+            }
+            else
+            {
+                console.log(`${num} is odd`)
+            }
+        }
+
+        function prime(){
+            let num = Number(prompt("Enter a number"))
+            let count=0;
+            for(let i=1;i<=num;i++)
+            {
+                if(num%i===0)
+                {
+                    count++
+                }
+            }
+            if(count===2)
+            {
+                console.log(`${num} is prime`)
+            }
+            else
+            {
+                console.log(`${num} is not a prime`)
+            }
+        }
+
+        function factorial(){
+            let num = Number(prompt("Enter a number")) 
+            let fact=1
+            for(let i=1;i<=num;i++)
+            {
+                fact=fact*i;
+            }
+            console.log(fact);
+        }
+
+        function factors(){
+            let num = Number(prompt("Enter a number"))
+            for(let i=1;i<=num;i++)
+            {
+                if(num%i===0)
+                {
+                    console.log(i)
+                }
+            }
+        }
+
+        function swapping(){
+            let num1 = Number(prompt("Enter 1st number"))
+            let num2 = Number(prompt("Enter 2nd number"))
+            let temp=0;
+            temp=num1;  //num1=num1+num2
+            num1=num2;  //num2=num1-num2
+            num2=temp;  //num1=num1-num2
+            console.log(`1st number is ${num1}`)
+            console.log(`2nd number is ${num2}`)
+        }
+
+        function Sum(){
+            let a= Number(prompt("Enter 1st number"))
+            let b= Number(prompt("Enter 2nd number"))
+            let sum=0;
+            for(let i=a;i<=b;i++)
+            {
+                sum=sum+i;
+            }
+            console.log(sum)
+        }
+
+        function SumEven(){
+            let a= Number(prompt("Enter 1st number"))
+            let b= Number(prompt("Enter 2nd number"))
+            let sum=0;
+            for(let i=a;i<=b;i++)
+            {
+                if(i%2===0)
+                {
+                    sum=sum+i;
+                }
+            }
+            console.log(sum)
+        }
+
+        function palindrome(){
+            let a= Number(prompt("Enter the number"))
+            let revstr=a;
+            for(let i=a.length-1;i>=0;i--)
+            {
+                revstr=revstr+a[i]
+            }
+            if(revstr===a){
+                console.log("palindrome")
+            }
+            else{
+                console.log("not a palindrome")
+            }
+        }
+        
+        function revStr(){
+            let str=prompt("enter a string")
+            let revstr=""
+            for(let i=str.length-1;i>=0;i--)
+            {
+                revstr=revstr+str[i]
+            }
+            console.log(revstr)
+        }
+
+        function palindromeStr(){
+            let str=prompt("enter a string")
+            let revstr=""
+            for(let i=str.length-1;i>=0;i--)
+            {
+                revstr=revstr+str[i]
+            }
+            if(revstr===str){
+                console.log("palindrome")
+            }
+            else{
+                console.log("not a palindrome")
+            }
+        }
+    </script>
+</body>
+</html>

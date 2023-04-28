@@ -1,0 +1,66 @@
+.container{
+    height: 100px;
+    /* position: sticky; */
+    background-color: transparent;
+}
+.bur{
+    height: 700px;
+}
+.burger{
+    padding-top: 0%;
+}
+.burger img{
+    width: 98vw;
+}
+
+.a:hover{
+    color: purple;
+}
+.burger h1{
+    font-size: 90px;
+    color: white;
+    position: absolute;
+    top: 380px;
+    font-family:cursive;
+    font-weight: 700;
+    left: 150px;
+    letter-spacing: -5px;
+}
+.order{
+    height: 45px;
+    width: 200px;
+    top:550px ;      
+    left: 620px;
+    position: absolute;
+    font-size: 24px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color:#FF5672;
+    color: white;
+    font-family: Calibri;
+}
+.burger h4{
+    top:600px ;      
+    left: 700px;
+    position: absolute;
+    color: white;
+}
+.store1{
+    
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    top:650px ;      
+    left: 500px;
+    border-radius: 9px;
+}
+.store2{
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    top:650px ;      
+    left: 750px;
+    border-radius: 9px;
+}
+
